@@ -1,0 +1,11 @@
+ENC_ID=S0001
+ENC_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+JWT_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+DB_HOST=localhost
+DB_PORT=3306(docker-compose.yml と一致させること)
+DB_USER=portal(docker-compose.yml と一致させること)
+DB_PASS=XXXXXXXX(docker-compose.yml と一致させること)
+DB_NAME=portal(docker-compose.yml と一致させること)
+FRONTPASS=http://localhost:3000
+PORT=3001
+NODE_ENV=development

@@ -1,0 +1,613 @@
+@charset "UTF-8";
+
+html{
+    font-size: 0.875rem;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 50px;/*←footerの高さ*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+header {
+    height: 50px;
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #EEE;
+    align-items: center;
+    padding: 0 20px ;
+}
+
+header .headerLinkBox {
+    display: flex;
+    flex-direction: row;
+}
+
+header button {
+    color: #eee;
+    font-weight: bold;
+    font-size: 15px;
+    width: 120px;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: #222 solid 2px;
+    background-color: #444;
+    border-radius: 0.2cm;
+}
+
+.title-1 {
+    max-width: 500px;
+    margin: 25px auto;
+}
+
+.title-2 {
+    margin: 35px 0;
+    padding: 10px 0 ;
+    color:#000;
+    background-color: rgba(200,200,200,0.5);
+    border: solid 3px rgba(210,210,210,0.5);
+    text-align: center;
+}
+
+.login dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.login dl dt{
+    width:23%;
+    height:30px;
+    padding: 3px;
+}
+
+.login dl dd{
+    width:72%;
+    height:30px;
+}
+
+input {
+    border:solid 1px #b5b5b5;
+    border-radius: 0.1cm;
+    width: 100%;
+    padding: 3px;
+}
+
+.alert {
+    padding: 3px;
+    color: #ff4444;
+    font-weight: bold;
+}
+
+.button-center {
+    text-align: center;
+}
+
+.login button{
+    background-color: #222;
+    color: #fff;
+    padding: 10px 50px;
+    width: 200px;
+    margin: 15px 0 0 0;
+    border-radius: 0.2cm;
+}
+
+.signUp button{
+    background-color: #222;
+    color: #fff;
+    padding: 10px 50px;
+    width: 200px;
+    margin: 0px 0 0 0;
+    border-radius: 0.2cm;
+}
+
+.newAC button{
+    background-color: #222;
+    color: #fff;
+    padding: 10px 50px;
+    width: 200px;
+    margin: 5px 0 0 0;
+    border-radius: 0.2cm;
+}
+
+footer {
+    position:absolute;
+    bottom :0;
+    height: 50px;
+    width: 100%;
+    background-color: #222222;
+}
+
+.box-1 {
+    padding: 30px;
+    width: 750px;
+    margin: 50px auto;
+    border: solid 2px #a5a5a5;
+    border-radius: 0.2cm;
+}
+
+.box-1 h3 {
+    text-align: center;
+    padding:0 0 10px 0;
+}
+
+.box-1 dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box-1 dl dt{
+    width:23%;
+    height:30px;
+    padding: 3px;
+}
+
+.box-1 dl dd{
+    width:72%;
+    height:30px;
+}
+
+.box-2 {
+    padding: 30px;
+    width: 450px;
+    margin: 50px auto;
+    border: solid 2px #a5a5a5;
+    border-radius: 0.2cm;
+}
+
+.message-1 {
+    padding: 5px 20px;
+    margin: 15px 5px;
+    background-color: #eeeeee;
+    border: solid 2px #f5f5f5;
+    border-radius: 0.2cm;
+}
+
+.message-1 p {
+    padding:5px 0;
+}
+
+
+/*---------------------------------------*/
+.menu {
+    margin-top: 20px;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.menu button {
+    font-weight: bold;
+    color: #fff;
+    background-color: #222;
+    padding: 10px 50px;
+    margin: 5px 0 25px 10px;
+    width: 280px;
+    border-radius: 0.2cm;
+}
+
+.frame {
+    display: flex;
+    flex-direction: row;
+    background-image: url("../image/21830aIMGL00251940_TP_V.jpg");
+    background-size: 100% 100%;
+}
+
+.frame-side {
+    min-width: 400px;
+    height:824px;
+    background-color: rgba(200,200,200,0.9);
+    padding: 20px 20px;
+    border-right:#222 solid 8px;
+    border-left:#222 solid 8px;
+}
+
+.frame-center {
+    width: calc( 100% - 400px);
+    height:824px;
+    display: flex;
+    justify-content:center;
+    position :relative;
+}
+
+.frame-center .title-1 {
+    margin: 25px 0;
+
+}
+
+.word {
+    color:#000;
+    padding: 20px 30px;
+    width: 95% ;
+    min-height: 280px;
+    position: absolute;
+    top: 250px;
+    overflow-wrap: break-word;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid #222 5px;
+    border-bottom: solid 10px #222;
+    border-radius: 1%;
+    background-color: rgba(200, 200, 200, 0.95);
+    animation-name: fadeInAnime_word;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInAnime_word {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+.word-main  {
+    padding: 10px 10px 0 10px;
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+.word-writen {
+    padding: 0 10px;
+    text-align: right;
+}
+
+
+.word2 {
+    color:#000;
+    padding: 20px 30px;
+    width: 95% ;
+    min-height: 280px;
+    position: absolute;
+    top: 540px;
+    overflow-wrap: break-word;
+    border: solid #222 5px;
+    border-bottom: solid 10px #222;
+    border-radius: 1%;
+    background-color: rgba(200, 200, 200, 0.95);
+}
+
+.History {
+    border-top: #333 solid 2px;
+    padding: 10px 20px;
+    font-size: 1.15rem;
+}
+
+.word2 .title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.History dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.History dt {
+    margin: 0 0 0 10px;
+    width: 130px
+}
+
+.History dd {
+    width: calc(100% - 140px);
+}
+
+
+
+.Todo {
+    border-top: #333 solid 2px;
+    padding: 10px 0px;
+    height : 50%
+
+}
+
+.Done {
+    border-top: #333 solid 2px;
+    padding: 10px 0px;
+    height : 50%
+}
+
+
+/*---------------------------------------*/
+
+.frame2 {
+    display: flex;
+    flex-direction: row;
+    background-image: url("../image/aig-ai230605026-xl_TP_V.jpg");
+    background-size: 100% 100%;
+    min-width: 500px;
+    height: calc(100vh - 100px);
+}
+
+.frame-side2 {
+    width: 300px;
+    height:calc( 100vh - 100px);
+    background-color: #222222;
+    padding: 20px 20px;
+    color: #eee;
+}
+
+.frame-side2 .box-first{
+    margin-bottom: 30px;
+}
+
+.frame-side2 .box-secound {
+    padding: 10px 0;
+    border-top: #999 solid 1px;
+}
+
+.frame-side2 h2 {
+    margin-bottom: 5px;
+}
+
+.frame-side2 input{
+    border:solid 1px #b5b5b5;
+    width: 100%;
+    padding: 3px;
+    margin: 10px 0px ;
+    background-color: #EEE;
+    margin-right: 40px;
+    border-radius: 0.1cm;
+}
+
+.diarySearch .right {
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-min1 {
+    font-weight: bold;
+    padding: 5px 5px;
+    margin: 5px 0px;
+    width: 100px;
+}
+
+.frame-side2 button {
+    color: #000;
+    background-color: #ccc;
+    border-radius: 0.2cm;
+}
+
+.index-month {
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: large;
+}
+
+.index-month li {
+    margin-top: 15px;
+}
+
+.index-month button {
+    color: #fff;
+    background-color:#222;
+}
+
+.frame-top2 {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(222,222,222,0.9);;
+    border-bottom: #222 solid 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-middle {
+    font-weight: bold;
+    padding: 10px 10px;
+    margin: 5px 0px;
+    width: 150px;
+    border-radius: 0.2cm;
+}
+
+.frame-center2 {
+    width: 100%;
+    height:100%;
+}
+
+.frame-top2 .title {
+    font-size:x-large;
+    margin: 15px 30px;
+    height: 70px;
+    color: #222;
+    width: 80%;
+    text-align: left;
+}
+
+.frame-top2 button {
+    margin: 30px 30px;
+    height: 40px;
+    color: #fff;
+    background-color: #222;
+}
+
+.frame-center-child {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;
+    overflow: auto;
+    height: calc(100% - 100px);
+}
+
+.dairy {
+    margin: 20px 20px;
+    padding: 20px 30px;
+    background-color: rgba(222,222,222,0.9);
+    width: calc(100% - 40px);
+    border: #444 solid 5px;
+    border-radius: 0.3cm;
+}
+
+.dairy-head {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    width: 100%;
+}
+
+.dairy-title {
+    margin: auto 0px;
+    white-space: pre-wrap;
+    overflow-wrap:break-word;
+    padding: 5px 10px;
+    min-width: 40%;
+    white-space: pre-wrap;
+}
+
+.dairy-head-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dairy-head-date {
+    margin: auto 20px;
+    font-size: 18px;
+    white-space:nowrap;
+}
+
+.dairy-head-btn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: auto 0px auto 20px;
+}
+
+.dairy-head button{
+    margin: auto 5px;
+    height: 40px;
+    color: #fff;
+    background-color: #222;
+    border-radius: 0.25cm;
+}
+
+.dairy-bottom {
+    margin: 15px 20px 0 0;
+    padding: 15px 10px;
+    width: 100%;
+    color: #222;
+    background-color: #eee;
+    border: #222 solid 2px;
+    border-radius: 0.25cm;
+    font-size: 17px;
+    white-space: pre-wrap;
+    overflow-wrap:break-word;
+}
+
+#overlay {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modalView {
+    z-index: 2;
+    width: 60%;
+    padding: 0 0 25px 0;
+    background: rgba(200, 200, 200, 0.95);
+    border: #222 solid 4px;
+    border-radius: 0.5cm;
+    text-align: center;
+
+}
+
+#modalView .title {
+    width: 100%;
+    background-color: #222;
+    color: #eee;
+    margin: 0 0 20px 0;
+    padding: 10px 0;
+}
+
+#modalView dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+#modalView dt{
+    padding: 11px 20px;
+    width: 70px;
+    text-align: right;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#modalView dd{
+    width: calc(100% - 100px);
+}
+
+#modalView .alert{
+    text-align: left;
+    font-size: 20px;
+    height: 28px;
+    padding: 0 0 5px 30px;
+}
+
+#modalView input{
+    width: 95%;
+    height: 35px;
+    margin: 10px 0;
+    padding: 5px;
+    border: #222 solid 2px;
+    background-color: #eee;
+    border-radius: 0.1cm;
+}
+
+#modalView textarea{
+    width: 95%;
+    margin: 10px 0;
+    padding: 5px;
+    border: #222 solid 2px;
+    background-color: #eee;
+    height: 230px;
+    border-radius: 0.1cm;
+}
+
+#modalView .buttonArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#modalView .buttonArea button{
+    text-align: center;
+    margin: 0px 20px 10px;
+    font-weight: bold;
+    background-color: #222;
+    color: #fff;
+    padding: 5px 20px;
+    width: 100px;
+    border: #444 solid 2px;
+    border-radius: 0.1cm;
+}
