@@ -1,9 +1,9 @@
-import CompHeader from "../comp/cHeader"
-import CompFooter from '../comp/cFooter';
+import CompHeader from "../comp/CompHeader"
+import CompFooter from '../comp/CompFooter';
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import { passResetDoneFlg } from "../state/atom";
-import CompPassResetEdit from "../comp/userChg/cPassResetEdit"
+import CompPassResetEdit from "../comp/userChg/CompPassResetEdit"
 
 export default function PassReset() {
 

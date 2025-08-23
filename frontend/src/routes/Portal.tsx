@@ -1,8 +1,8 @@
 import logoImage from "../image/Daily_1_transparent.png";
-import CompHeader from '../comp/cHeader';
-import CompWord from '../comp/cWord';
-import CompFooter from '../comp/cFooter';
-import CompTodoListPortal from '../comp/todo/cTodoListPortal'
+import CompHeader from '../comp/CompHeader';
+import CompWord from '../comp/CompWord';
+import CompFooter from '../comp/CompFooter';
+import CompTodoListPortal from '../comp/todo/CompTodoListPortal'
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
 import { getLog, interfaceLog } from "../api/common";

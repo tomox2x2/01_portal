@@ -1,8 +1,8 @@
-import CompHeader from '../comp/cHeader';
-import CompFooter from '../comp/cFooter';
-import CompTodoEdit from '../comp/cTodoEdit';
-import CompTodoModal from "../comp/todo/cTodoModal";
-import CompTodoDaySetDialogModal from "../comp/todo/cTodoDaySetDialogModal";
+import CompHeader from '../comp/CompHeader';
+import CompFooter from '../comp/CompFooter';
+import CompTodoEdit from '../comp/CompTodoEdit';
+import CompTodoModal from "../comp/todo/CompTodoModal";
+import CompTodoDaySetDialogModal from "../comp/todo/CompTodoDaySetDialogModal";
 
 export default function TodoEdit() {
     return (

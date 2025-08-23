@@ -1,9 +1,9 @@
-import CompHeader from "../comp/cHeader"
-import CompFooter from '../comp/cFooter';
+import CompHeader from "../comp/CompHeader"
+import CompFooter from '../comp/CompFooter';
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import { userChgFlg } from "../state/atom";
-import CompChgEdit from "../comp/userChg/cUseChgEdit"
+import CompChgEdit from "../comp/userChg/CompUseChgEdit"
 
 export default function UserChg() {
 

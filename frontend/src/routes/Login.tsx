@@ -1,9 +1,9 @@
 import logoImage from "../image/Daily_1.png";
-import CompHeader from '../comp/cHeader';
-import CompLogin from "../comp/login/cLogin"
-import CompSignUp from '../comp/login/cSignUp';
-import CompFooter from '../comp/cFooter';
-import CompPassResetBtn from "../comp/login/cPassResetBtn";
+import CompHeader from '../comp/CompHeader';
+import CompLogin from "../comp/login/CompLogin"
+import CompSignUp from '../comp/login/CompSignUp';
+import CompFooter from '../comp/CompFooter';
+import CompPassResetBtn from "../comp/login/CompPassResetBtn";
 
 export default function Login() {
     return (

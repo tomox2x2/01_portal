@@ -1,6 +1,6 @@
-import CompNewAccount from "../comp/cNewAC"
-import CompHeader from "../comp/cHeader"
-import CompFooter from '../comp/cFooter';
+import CompNewAccount from "../comp/CompNewAC"
+import CompHeader from "../comp/CompHeader"
+import CompFooter from '../comp/CompFooter';
 
 export default function NewAC() {
     return (

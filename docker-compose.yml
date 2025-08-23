@@ -1,0 +1,47 @@
+services:
+  front:
+    build:
+      context: ./01_front
+      dockerfile: Dockerfile
+    ports:
+      - "3002:80"
+    depends_on:
+      - back
+    networks:
+      - app-network
+
+  back:
+    build:
+      context: ./02_back
+      dockerfile: Dockerfile
+    ports:
+      - "3310:3000"
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8.0.35
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: portal
+      MYSQL_USER: portalUser
+      MYSQL_PASSWORD: 0kb09jO_0506
+      TZ: Asia/Tokyo
+    volumes:
+        -  mysql-data:/var/lib/mysql
+        -  ./03_DB/script:/docker-entrypoint-initdb.d
+    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_general_ci','--default-time-zone=+09:00']
+    networks:
+      - app-network
+
+volumes:
+  mysql-data:
+
+networks:
+  app-network:
+    driver: bridge
+    external: false

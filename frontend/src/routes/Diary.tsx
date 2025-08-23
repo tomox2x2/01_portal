@@ -1,7 +1,7 @@
-import CompHeader from '../comp/cHeader';
-import CompFooter from '../comp/cFooter';
-import CompDiary from '../comp/cDiary';
-import CompDiaryModal from '../comp/diary/cDiaryModal';
+import CompHeader from '../comp/CompHeader';
+import CompFooter from '../comp/CompFooter';
+import CompDiary from '../comp/CompDiary';
+import CompDiaryModal from '../comp/diary/CompDiaryModal';
 
 export default function Diary() {
     return (
